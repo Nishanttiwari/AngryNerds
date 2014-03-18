@@ -1,0 +1,49 @@
+﻿@model ForecastFrontEnd.Models.DataView
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<style>
+    body
+    {
+        font: 10px sans-serif;
+    }
+
+    .arc path
+    {
+        stroke: #fff;
+    }
+</style>
+<body>
+    <div>
+    <div id="marketShare" style="
+    display: inline-block;
+    width: 49%;
+    float: left;
+    vertical-align: -webkit-baseline-middle;
+    padding-top: 100px;
+" >
+        @{Html.RenderPartial("~/Views/Shared/_MarketShareDetails.cshtml", Model.MarketShareModel);}
+    </div>
+    <div id="adSpent"style="
+    display: inline-block;
+    width: 49%;
+    float: right;
+">
+        @{Html.RenderPartial("~/Views/Shared/_AdSpentDetails.cshtml");}
+    </div>
+        </div>
+    <div id="channelSpentTrend">
+        @{Html.RenderPartial("~/Views/Shared/_ChannelSpentTrendDetails.cshtml");}
+    </div>
+    <div id="idealSpending">
+        @{Html.RenderPartial("~/Views/Shared/_IdealSpendingDetails.cshtml");}
+    </div>
+    <div id="correlation">
+        @{Html.RenderPartial("~/Views/Shared/_Correlation.cshtml");}
+    </div>
+</body>

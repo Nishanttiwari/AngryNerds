@@ -1,0 +1,6 @@
+﻿Manufacturer	Online	TV	Radio	Print
+P&G				20		40	10		60
+Unilever		15		50	20		50
+Nestlé			10		35	20		55
+Kraft Foods		20		45	15		45
+Danone			35		35	35		55
